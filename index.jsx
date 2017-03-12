@@ -6,14 +6,14 @@ class App extends React.Component{
   constructor(props){
     super(props);
     this.state={//初始状态
-      todo:""//数组 
+      todo:""
     }
     console.log("constructor");
   }
   componentDidMount () {
     console.log("did mount");
     this.setState({//改变状态
-      todo:"hello"
+      todo:"ToDo"
     });    
   }
 
@@ -28,8 +28,9 @@ class App extends React.Component{
     console.log("render");
     return (
       <div>
-        hello world<p>{this.state.todo}</p><br/>
         <input onChange={e=>this.handleChange(e)} />
+        <br/>
+        ToDo list<p>{this.state.todo}</p>
       </div>
     );
   }

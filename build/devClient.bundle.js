@@ -9460,7 +9460,7 @@ var App = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 
     _this.state = { //初始状态
-      todo: "" //数组 
+      todo: ""
     };
     console.log("constructor");
     return _this;
@@ -9471,7 +9471,7 @@ var App = function (_React$Component) {
     value: function componentDidMount() {
       console.log("did mount");
       this.setState({ //改变状态
-        todo: "hello"
+        todo: "ToDo"
       });
     }
   }, {
@@ -9492,16 +9492,16 @@ var App = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         null,
-        'hello world',
+        _react2.default.createElement('input', { onChange: function onChange(e) {
+            return _this2.handleChange(e);
+          } }),
+        _react2.default.createElement('br', null),
+        'ToDo list',
         _react2.default.createElement(
           'p',
           null,
           this.state.todo
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement('input', { onChange: function onChange(e) {
-            return _this2.handleChange(e);
-          } })
+        )
       );
     }
   }]);
